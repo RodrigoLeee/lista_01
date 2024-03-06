@@ -23,7 +23,7 @@ print(a)
 
 Escolha a opção que responde corretamente:
 
-a) Imprime os números pares de 1 a 10.
+**a) Imprime os números pares de 1 a 10. [Resposta: a]**
 
 b) Imprime os números ímpares de 1 a 10.
 
@@ -39,7 +39,7 @@ ______
 
 No lugar onde está escrito “// linha” qual das opções abaixo deve estar para funcionar corretamente o código?
 
-A) let carro = new Carro("Toyota");
+**A) let carro = new Carro("Toyota"); [Resposta: A]**
 
 B) let ligar = new ligar("Toyota");
 
@@ -55,7 +55,7 @@ ______
 
 Escolha a opção que responde corretamente:
 
-A) 18
+**A) 18 [Resposta: A]**
 
 B) 16
 
@@ -67,7 +67,8 @@ ______
 
 **4)** Como você criaria um método `acelerar()` em uma classe `Carro`, que recebe um parâmetro `velocidade` e o adiciona a um atributo `velocidadeAtual`?
 
-A) ![Uma imagem](assets/ex04_1.PNG)
+**A)** ![Uma imagem](assets/ex04_1.PNG)
+**[Resposta: A]**
 
 B) ![Uma imagem](assets/ex04_2.PNG)
 
@@ -79,7 +80,8 @@ ______
 
 **5)** Qual a forma correta de definir uma classe Carro em JavaScript, com um método ligar() e um atributo marca?
 
-A) ![Uma imagem](assets/ex05_1.PNG)
+**A)** ![Uma imagem](assets/ex05_1.PNG)
+**[Resposta: A]**
 
 B) ![Uma imagem](assets/ex05_2.PNG)
 
@@ -95,7 +97,7 @@ ______
 
 Qual será a saída do código acima?
 
-A) "Olá, meu nome é João. Olá, meu nome é Maria."
+**A) "Olá, meu nome é João. Olá, meu nome é Maria." [Resposta: A]**
 
 B) "Olá, meu nome é ."
 
@@ -119,6 +121,24 @@ Criando e manipulando Animais:
 - Para cada animal, chame o método descrever() para ver a descrição no console.
 
 Dica: Utilize `console.log()` para exibir as informações!
+
+```javascript
+class Animal {
+    constructor(nome, idade) {
+        this.nome = nome;
+        this.idade = idade;
+    }
+    descrever() {
+        console.log(`O seu nome é ${this.nome}, sua idade é ${this.idade}.`);
+    }
+}
+
+let cachorro = new Animal("Spike", "3");
+let gato = new Animal("Meowie", "6");
+
+cachorro.descrever()
+gato.descrever()
+```
 
 ______
 
@@ -145,6 +165,37 @@ Chamando os Métodos:
 
 Dica: Utilize console.log() para exibir as informações!
 
+```javascript
+class Animal {
+    constructor(nome, idade) {
+        this.nome = nome;
+        this.idade = idade;
+    }
+    descrever() {
+        console.log(`O seu nome é ${this.nome}, sua idade é ${this.idade}.`);     
+    }
+}
+
+class Gato extends Animal {
+    constructor(nome, idade, cor) {
+        super(nome, idade);
+        this.cor = cor;
+    }
+    descrever() {
+        console.log(`O seu nome é ${this.nome}, sua idade é ${this.idade}, sua cor é ${this.cor}.`);
+    }
+    miar() {
+        console.log(`Meow.`);
+    }
+}
+
+let cachorro = new Animal("Marley", "1");
+let gato = new Gato("Tom", "4", "Laranja");
+
+cachorro.descrever()
+gato.descrever()
+gato.miar()
+```
 
 ______
 
@@ -167,6 +218,30 @@ Chamando o Método para Ver o Total:
 
 Dica: Utilize console.log() para exibir as informações!
 
+```javascript
+class SomadorDeNotas {
+    constructor(total) {
+        this.total = total;
+        this.total = 0;
+    }
+    adicionarNota(nota) {
+        this.total += nota;
+    }
+    verTotal() {
+        console.log(this.total)
+    }
+}
+
+let somador = new SomadorDeNotas()
+
+somador.adicionarNota(20)
+somador.adicionarNota(12)
+somador.adicionarNota(4)
+somador.adicionarNota(21)
+somador.adicionarNota(9)
+somador.adicionarNota(6)
+somador.verTotal()
+```
 
 ______
 
@@ -188,3 +263,30 @@ Agora, sua tarefa é escrever um código em JavaScript que crie as classes Funci
 - Para cada objeto, chame o método calcularSalario() e mostre o salário calculado no console.
 
 Certifique-se de explicar cada parte do código utilizando comentários, explicando para que serve cada atributo e método, bem como a lógica por trás do cálculo de salário para o tipo de funcionário Professor.
+
+```javascript
+class Funcionario {
+    constructor(nome, idade, salarioBase) {
+        this.nome = nome;
+        this.idade = idade;
+        this.salarioBase = salarioBase;
+    }
+    calcularSalario() {
+        console.log(salarioBase)
+    }
+}
+
+class Professor extends Funcionario {
+    constructor(nome, idade, salarioBase, disciplina, horasAulasSemana) {
+        super(nome, idade, salarioBase);
+        this.disciplina = disciplina;
+        this.horasAulasSemana = horasAulasSemana;
+    }
+    calcularSalario() {
+        console.log(this.salarioBase*this.horasAulasSemana)
+    }
+}
+
+let prof = new Professor("Rodrigo", 31, 160, "Historia", 40) //Informações do professor como OBJETO
+prof.calcularSalario() //OBJETO com INFORMAÇÕES.FUNÇÃO específica a ser chamada dentor da CLASSE PROFESSOR
+```
