@@ -123,21 +123,21 @@ Criando e manipulando Animais:
 Dica: Utilize `console.log()` para exibir as informações!
 
 ```javascript
-class Animal {
-    constructor(nome, idade) {
-        this.nome = nome;
-        this.idade = idade;
+class Animal { //Define a class chamada "Animal"
+    constructor(nome, idade) { //Constructor e Variáveis
+        this.nome = nome; //Variável nome
+        this.idade = idade; //Variável idade
     }
-    descrever() {
-        console.log(`O seu nome é ${this.nome}, sua idade é ${this.idade}.`);
+    descrever() { //Função
+        console.log(`O seu nome é ${this.nome}, sua idade é ${this.idade}.`); //Imprime no console
     }
 }
 
-let cachorro = new Animal("Spike", "3");
-let gato = new Animal("Meowie", "6");
+let cachorro = new Animal("Spike", "3"); //Cria um objeto cachorro
+let gato = new Animal("Meowie", "6"); //Cria um objeto gato
 
-cachorro.descrever()
-gato.descrever()
+cachorro.descrever() //Chama a função "descrever()" dentro do objeto cachorro
+gato.descrever() //Chama a função "descrever()" dentro do objeto gato
 ```
 
 ______
@@ -166,35 +166,35 @@ Chamando os Métodos:
 Dica: Utilize console.log() para exibir as informações!
 
 ```javascript
-class Animal {
-    constructor(nome, idade) {
-        this.nome = nome;
-        this.idade = idade;
+class Animal { //Define a class chamada "Animal"
+    constructor(nome, idade) { //Constructor e Variáveis
+        this.nome = nome; //Variável nome
+        this.idade = idade; //Variável idade
     }
-    descrever() {
-        console.log(`O seu nome é ${this.nome}, sua idade é ${this.idade}.`);     
-    }
-}
-
-class Gato extends Animal {
-    constructor(nome, idade, cor) {
-        super(nome, idade);
-        this.cor = cor;
-    }
-    descrever() {
-        console.log(`O seu nome é ${this.nome}, sua idade é ${this.idade}, sua cor é ${this.cor}.`);
-    }
-    miar() {
-        console.log(`Meow.`);
+    descrever() { //Função
+        console.log(`O seu nome é ${this.nome}, sua idade é ${this.idade}.`); //Imprime no console
     }
 }
 
-let cachorro = new Animal("Marley", "1");
-let gato = new Gato("Tom", "4", "Laranja");
+class Gato extends Animal { //Define a class "Gato"
+    constructor(nome, idade, cor) { //Constructor e Variáveis
+        super(nome, idade); //Variável nome
+        this.cor = cor; //Variável idade
+    }
+    descrever() { //Função
+        console.log(`O seu nome é ${this.nome}, sua idade é ${this.idade}, sua cor é ${this.cor}.`); //Imprime no console
+    }
+    miar() { //Função
+        console.log(`Meow.`); //Imprime no console
+    }
+}
 
-cachorro.descrever()
-gato.descrever()
-gato.miar()
+let cachorro = new Animal("Marley", "1"); //Cria um objeto cachorro
+let gato = new Gato("Tom", "4", "Laranja"); //Cria um objeto gato
+
+cachorro.descrever() //Chama a função "descrever()" dentro do objeto cachorro
+gato.descrever() //Chama a função "descrever()" dentro do objeto gato
+gato.miar() //Chama a função "miar()" dentro do objeto gato
 ```
 
 ______
@@ -219,28 +219,28 @@ Chamando o Método para Ver o Total:
 Dica: Utilize console.log() para exibir as informações!
 
 ```javascript
-class SomadorDeNotas {
-    constructor(total) {
-        this.total = total;
-        this.total = 0;
+class somadorDeNotas { //Define a class chamada "somadorDeNotas"
+    constructor(total) { //Constructor e Variável
+        this.total = total; //Variável total
+        this.total = 0; //Variável total = 0;
     }
-    adicionarNota(nota) {
-        this.total += nota;
+    adicionarNota(nota) { //Função adicionarNota
+        this.total += nota; //Variável tota + nota
     }
-    verTotal() {
-        console.log(this.total)
+    verTotal() { //Função verTotal
+        console.log(this.total) //Imprime no console
     }
 }
 
-let somador = new SomadorDeNotas()
+let somador = new somadorDeNotas() //Cria um objeto somador
 
-somador.adicionarNota(20)
-somador.adicionarNota(12)
-somador.adicionarNota(4)
-somador.adicionarNota(21)
-somador.adicionarNota(9)
-somador.adicionarNota(6)
-somador.verTotal()
+somador.adicionarNota(20) //Chama a função "adicionarNota()" dentro do objeto somador
+somador.adicionarNota(12) //Chama a função "adicionarNota()" dentro do objeto somador
+somador.adicionarNota(4) //Chama a função "adicionarNota()" dentro do objeto somador
+somador.adicionarNota(21) //Chama a função "adicionarNota()" dentro do objeto somador
+somador.adicionarNota(9) //Chama a função "adicionarNota()" dentro do objeto somador
+somador.adicionarNota(6) //Chama a função "adicionarNota()" dentro do objeto somador
+somador.verTotal() //Chama a função "verTotal()" dentro do objeto somador
 ```
 
 ______
@@ -265,28 +265,30 @@ Agora, sua tarefa é escrever um código em JavaScript que crie as classes Funci
 Certifique-se de explicar cada parte do código utilizando comentários, explicando para que serve cada atributo e método, bem como a lógica por trás do cálculo de salário para o tipo de funcionário Professor.
 
 ```javascript
-class Funcionario {
+class Funcionario { //Define a class chamada "Funcionario"
     constructor(nome, idade, salarioBase) {
-        this.nome = nome;
-        this.idade = idade;
-        this.salarioBase = salarioBase;
+        this.nome = nome; //Variável nome
+        this.idade = idade; //Variável idade
+        this.salarioBase = salarioBase; //Variável salarioBase
     }
-    calcularSalario() {
-        console.log(salarioBase)
-    }
-}
-
-class Professor extends Funcionario {
-    constructor(nome, idade, salarioBase, disciplina, horasAulasSemana) {
-        super(nome, idade, salarioBase);
-        this.disciplina = disciplina;
-        this.horasAulasSemana = horasAulasSemana;
-    }
-    calcularSalario() {
-        console.log(this.salarioBase*this.horasAulasSemana)
+    calcularSalario() { //Função
+        console.log(salarioBase) //Imprime no console
     }
 }
 
-let prof = new Professor("Rodrigo", 31, 160, "Historia", 40) //Informações do professor como OBJETO
-prof.calcularSalario() //OBJETO com INFORMAÇÕES.FUNÇÃO específica a ser chamada dentor da CLASSE PROFESSOR
+class Professor extends Funcionario { //Define a class chamada "Professor"
+    constructor(nome, idade, salarioBase, disciplina, horasAulasSemana) { //Constructor e Variáveis
+        super(nome, idade, salarioBase); //Variáveis da class "Funcionario"
+        this.disciplina = disciplina; //Variável Disciplina
+        this.horasAulasSemana = horasAulasSemana; //Variável de Horas
+    }
+    calcularSalario() { //Função
+        console.log(this.salarioBase*this.horasAulasSemana) //Calcula salário por semana
+    }
+}
+
+let Professor1 = new Professor("Rodrigo", 31, 200, "Geografia", 40) //Informações do professor como OBJETO
+let Professor2 = new Professor("Ana", 33, 235, "Matemática", 38) //Informações do professor como OBJETO
+Professor1.calcularSalario() //OBJETO com INFORMAÇÕES.FUNÇÃO específica a ser chamada dentro da CLASSE PROFESSOR
+Professor2.calcularSalario() //OBJETO com INFORMAÇÕES.FUNÇÃO específica a ser chamada dentro da CLASSE PROFESSOR
 ```
