@@ -283,7 +283,7 @@ class Professor extends Funcionario { //Define a class chamada "Professor"
         this.horasAulasSemana = horasAulasSemana; //Variável de Horas
     }
     calcularSalario() { //Função
-        console.log(this.salarioBase*this.horasAulasSemana) //Calcula salário por semana
+        console.log('O salário semanal é: ' + this.salarioBase*this.horasAulasSemana + ' R$') //Calcula salário por semana
     }
 }
 
