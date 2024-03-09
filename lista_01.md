@@ -288,7 +288,7 @@ class Professor extends Funcionario { //Define a class chamada "Professor"
 }
 
 let Professor1 = new Professor("Rodrigo", 31, 200, "Geografia", 40) //Informações do professor como OBJETO
-let Professor2 = new Professor("Ana", 33, 200, "Matemática", 38) //Informações do professor como OBJETO
+let Professor2 = new Professor("Ana", 33, 235, "Matemática", 38) //Informações do professor como OBJETO
 Professor1.calcularSalario() //OBJETO com INFORMAÇÕES.FUNÇÃO específica a ser chamada dentro da CLASSE PROFESSOR
 Professor2.calcularSalario() //OBJETO com INFORMAÇÕES.FUNÇÃO específica a ser chamada dentro da CLASSE PROFESSOR
 ```
